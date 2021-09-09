@@ -92,11 +92,13 @@
 
 .button-primary {
 	color: color(button-primary);
-    background-color: color-bg(button-primary);
+    // background-color: color-bg(button-primary);
+    background-color: #23af91;
 	border-color: color-border(button-primary);
 
     &:hover {
         background-color: color-bg(button-primary-hover);
+       
 		border-color: color-border(button-primary-hover);
     }
 

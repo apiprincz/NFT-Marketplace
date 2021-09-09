@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import ButtonGroup from "../elements/ButtonGroup";
@@ -14,7 +14,7 @@ const defaultProps = {
   ...SectionProps.defaults,
 };
 
-const Hero = ({
+const SectorHero = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -25,6 +25,7 @@ const Hero = ({
   ...props
 }) => {
   const [videoModalActive, setVideomodalactive] = useState(false);
+  let [counter, setCounter] = useState(0);
 
   const openModal = (e) => {
     e.preventDefault();
@@ -51,6 +52,18 @@ const Hero = ({
     bottomDivider && "has-bottom-divider"
   );
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (counter >= 2) {
+        setCounter(0);
+      } else {
+        setCounter(counter + 1);
+      }
+    }, 1000);
+    // clearing interval
+    return () => clearInterval(timer);
+  });
+
   return (
     <section {...props} className={outerClasses}>
       <div className="container-sm">
@@ -59,23 +72,45 @@ const Hero = ({
             <h1
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
+              style={{ transform: "translateX(-75px)" }}
             >
-              KuNFT's For <span className="text-color-primary">EVERYONE</span>
+              Start &nbsp;
+              <div style={{ display: "inline", position: "relative" }}>
+                {counter === 0 ? (
+                  <span
+                    style={{ position: "absolute", top: "0", left: "0" }}
+                    className="text-color-primary"
+                  >
+                    Creating
+                  </span>
+                ) : (
+                  ""
+                )}
+                {counter === 1 ? (
+                  <span
+                    style={{ position: "absolute", top: "0", left: "0" }}
+                    className="text-color-primary"
+                  >
+                    Telling
+                  </span>
+                ) : (
+                  ""
+                )}
+                {counter === 2 ? (
+                  <span
+                    style={{ position: "absolute", top: "0", left: "0" }}
+                    className="text-color-primary"
+                  >
+                    Selling
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
             </h1>
-            <div className="container-xs">
-              <p className="m-0  reveal-from-bottom" data-reveal-delay="400">
-                The perks of building a rich NFT marketplace is to create a
-                sense of belonging for all.
-              </p>
-              <br></br>
-              <p
-                className="m-0 mb-16 reveal-from-bottom"
-                data-reveal-delay="400"
-              >
-                Tell your unique{" "}
-                <span style={{ color: "#23af91" }}>stories</span> with KuNFT's
-              </p>
 
+            <div className="container-xs">
+              
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button
@@ -84,10 +119,10 @@ const Hero = ({
                     wideMobile
                     href="/KuMarketPlace"
                   >
-                    Explore
+                    Explore 
                   </Button>
                   <Button tag="a" color="dark" wideMobile href="#">
-                    Learn More
+                    Apply Now
                   </Button>
                 </ButtonGroup>
               </div>
@@ -126,7 +161,7 @@ const Hero = ({
   );
 };
 
-Hero.propTypes = propTypes;
-Hero.defaultProps = defaultProps;
+SectorHero.propTypes = propTypes;
+SectorHero.defaultProps = defaultProps;
 
-export default Hero;
+export default SectorHero;
