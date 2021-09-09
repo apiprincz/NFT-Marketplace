@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect,FC } from "react";
 import { useLocation, Switch } from "react-router-dom";
 import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
@@ -16,6 +16,15 @@ import Creator from "./views/Creator";
 //MarketPlace
 import MarketPlace from "./views/MarketPlace";
 
+import { createTheme, ThemeProvider } from '@material-ui/core';
+import { deepPurple, pink } from '@material-ui/core/colors';
+import 'antd/dist/antd.dark.less';
+import { SnackbarProvider } from 'notistack';
+
+import './App.css';
+import { Demo } from './Demo';
+
+
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
@@ -24,7 +33,44 @@ const trackPage = (page) => {
   ReactGA.pageview(page);
 };
 
-const App = () => {
+/* from sol-nft program */
+
+
+const theme = createTheme({
+  palette: {
+      type: 'dark',
+      primary: {
+          main: deepPurple[700],
+      },
+      secondary: {
+          main: pink[700],
+      },
+  },
+  overrides: {
+      MuiButtonBase: {
+          root: {
+              justifyContent: 'flex-start',
+          },
+      },
+      MuiButton: {
+          root: {
+              textTransform: undefined,
+              padding: '12px 16px',
+          },
+          startIcon: {
+              marginRight: 8,
+          },
+          endIcon: {
+              marginLeft: 8,
+          },
+      },
+  },
+});
+
+/* from sol-nft program */
+
+const App: FC = () => {
+  
   const childRef = useRef();
   let location = useLocation();
 
@@ -37,6 +83,11 @@ const App = () => {
   }, [location]);
 
   return (
+    <ThemeProvider theme={theme}>
+            <SnackbarProvider>
+                <Demo />
+               
+            
     <ScrollReveal
       ref={childRef}
       children={() => (
@@ -55,7 +106,13 @@ const App = () => {
         </Switch>
       )}
     />
+    </SnackbarProvider>
+        </ThemeProvider>
   );
 };
 
 export default App;
+
+
+
+
