@@ -5,6 +5,7 @@ import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
+import placeholder from "./../../assets/images/video-placeholder.jpg";
 
 const propTypes = {
   ...SectionProps.types,
@@ -110,7 +111,6 @@ const SectorHero = ({
             </h1>
 
             <div className="container-xs">
-              
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button
@@ -119,7 +119,7 @@ const SectorHero = ({
                     wideMobile
                     href="/KuMarketPlace"
                   >
-                    Explore 
+                    Explore
                   </Button>
                   <Button tag="a" color="dark" wideMobile href="#">
                     Apply Now
@@ -141,7 +141,7 @@ const SectorHero = ({
             >
               <Image
                 className="has-shadow"
-                src={require("./../../assets/images/video-placeholder.jpg")}
+                src={placeholder}
                 alt="Hero"
                 width={896}
                 height={504}

@@ -144,13 +144,13 @@ export const Demo: FC = () => {
                                         <TableCell>
                                             <AntDesignWalletMultiButton />
                                         </TableCell> */}
-                                        <TableCell>
+                                        {/* <TableCell>
                                             <ReactUIWalletMultiButton />
-                                        </TableCell>
+                                        </TableCell> */}
                                         {/* <TableCell></TableCell> */}
                                     </TableRow>
                                     <TableRow>
-                                        <TableCell></TableCell>
+                                        {/* <TableCell></TableCell> */}
                                         {/* <TableCell>
                                             <Tooltip
                                                 title="Only runs if the wallet is ready to connect"
@@ -170,14 +170,17 @@ export const Demo: FC = () => {
                                             </Tooltip>
                                         </TableCell> */}
                                         <TableCell>
-                                            <RequestAirdrop />
+                                            <ReactUIWalletMultiButton />
                                         </TableCell>
+                                        {/* <TableCell>
+                                            <RequestAirdrop />
+                                        </TableCell> */}
                                         <TableCell>
                                             <SendTransaction />
                                         </TableCell>
-                                        <TableCell>
+                                        {/* <TableCell>
                                             <SignMessage />
-                                        </TableCell>
+                                        </TableCell> */}
                                     </TableRow>
                                 </TableBody>
                             </Table>

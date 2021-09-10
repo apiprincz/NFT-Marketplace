@@ -5,6 +5,8 @@ import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
+import video from "./../../assets/images/video-placeholder.jpg";
+import { Demo } from "../../Demo";
 
 const propTypes = {
   ...SectionProps.types,
@@ -77,7 +79,7 @@ const Hero = ({
               </p>
 
               <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
+                {/* <ButtonGroup>
                   <Button
                     tag="a"
                     color="primary"
@@ -89,7 +91,8 @@ const Hero = ({
                   <Button tag="a" color="dark" wideMobile href="#">
                     Learn More
                   </Button>
-                </ButtonGroup>
+                </ButtonGroup> */}
+                <Demo />
               </div>
             </div>
           </div>
@@ -106,7 +109,7 @@ const Hero = ({
             >
               <Image
                 className="has-shadow"
-                src={require("./../../assets/images/video-placeholder.jpg")}
+                src={video}
                 alt="Hero"
                 width={896}
                 height={504}
