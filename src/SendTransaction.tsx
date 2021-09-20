@@ -18,7 +18,17 @@ const SendTransaction: FC = () => {
             return;
         }
 
-
+        let fromAirdropSignature: TransactionSignature = '';
+            fromAirdropSignature = await connection.requestAirdrop(
+                publicKey,
+                LAMPORTS_PER_SOL,
+            );
+    
+            console.log("fromAirdropSignature", fromAirdropSignature)
+            //wait for airdrop confirmation
+    
+            await connection.confirmTransaction(fromAirdropSignature, 'processed');
+        
 
         let signature: TransactionSignature = '';
         var devWallet = Keypair.generate();

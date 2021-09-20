@@ -62,7 +62,7 @@ const Sector = ({
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
             >
-              Interested in telling your own stories with KuNFT's?
+              Interested in telling your own stories with NOKNFT's?
               {/* KuNFT's For <span className="text-color-primary">EVERYONE</span> */}
             </h1>
             <div className="container-xs">

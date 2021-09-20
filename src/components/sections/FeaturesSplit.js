@@ -52,7 +52,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: "How It Works!",
+    title: "RoadMap",
     // paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
   };
 
@@ -62,22 +62,22 @@ const FeaturesSplit = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
-            <div className="split-item">
+            <div
+              className="split-item"
+              data-aos="fade-right"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
               <div
                 className="split-item-content center-content-mobile reveal-from-left"
                 data-reveal-container=".split-item"
               >
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  OWN.
-                </div>
-                <h3 className="mt-0 mb-12">Create Your Unique Story</h3>
+                <h3 className="mt-0 mb-12">
+                  Design and Creation Of NOK NFT series
+                </h3>
                 <p className="m-0">
-                  The beauty of an art lies in the story behind it. So KuNFT's
-                  are no different.
-                  <br></br>
-                  <br></br>
-                  With KuNFT's we offer creatives, artists and like minds the
-                  platform to own their art in a way that is unique to them.
+                  After weeks of thoughtful imagination, the ideas are brought
+                  to live in reality.{" "}
                 </p>
               </div>
               <div
@@ -87,30 +87,30 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <Image
+                {/* <Image
                   src={featureone}
                   alt="Features split 01"
                   width={528}
                   height={396}
-                />
+                /> */}
               </div>
             </div>
 
-            <div className="split-item">
+            <div
+              className="split-item"
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
               <div
                 className="split-item-content center-content-mobile reveal-from-right"
                 data-reveal-container=".split-item"
               >
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  POLL..
-                </div>
-                <h3 className="mt-0 mb-12">Get Audience</h3>
+                <h3 className="mt-0 mb-12">Minting Of NOK Commences</h3>
                 <p className="m-0">
-                  This is a revolutionary concept for extending originality of
-                  such works. Similar to how users opinion role play works in
-                  google play store,We here to help creatives gets a fair review
-                  of their artworks by KuNFT community albeit in a decentralised
-                  manner.
+                  It's Obvious Nokians can't wait further to get their hands on
+                  the beautiful art. On September 14, NOKs goes live on the
+                  Solana blockchain
                 </p>
               </div>
               <div
@@ -120,34 +120,29 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <Image
+                {/* <Image
                   src={featuretwo}
                   alt="Features split 02"
                   width={528}
                   height={396}
-                />
+                /> */}
               </div>
             </div>
-
-            <div className="split-item">
+            <div
+              className="split-item"
+              data-aos="fade-right"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
               <div
                 className="split-item-content center-content-mobile reveal-from-left"
                 data-reveal-container=".split-item"
               >
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  HONE It...
-                </div>
-                <h3 className="mt-0 mb-12">Derive Value</h3>
+                <h3 className="mt-0 mb-12">NOKs Trading Begins </h3>
                 <p className="m-0">
-                  We offer creatives &amp; artists with easy-to-use tools to
-                  refine, mint and sell their works for relatively small fee.
-                  <br></br>
-                  <br></br>
-                  Collectors and art enthusiast are incentivize when buying on
-                  KuMarketPlace based on 
-                  <br></br>
-                  <br></br>• The amount of tokens they hold.
-                  <br></br>• Average rating
+                  Open trading on the Marketplace begins right after the minting
+                  process is completely. After all, NOKs are eager to find new
+                  owners.
                 </p>
               </div>
               <div
@@ -157,12 +152,111 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <Image
-                  src={featurethree}
-                  alt="Features split 03"
+                {/* <Image
+                  src={featureone}
+                  alt="Features split 01"
                   width={528}
                   height={396}
-                />
+                /> */}
+              </div>
+            </div>
+
+            <div
+              className="split-item"
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
+              <div
+                className="split-item-content center-content-mobile reveal-from-right"
+                data-reveal-container=".split-item"
+              >
+                <h3 className="mt-0 mb-12"> The First Sweepstakes</h3>
+                <p className="m-0">
+                  All holders will be eligible to enter the first sweepstakes
+                  freely. Funds for the exercise will be disbursed from the
+                  development wallet.
+                </p>
+              </div>
+              <div
+                className={classNames(
+                  "split-item-image center-content-mobile reveal-from-bottom",
+                  imageFill && "split-item-image-fill"
+                )}
+                data-reveal-container=".split-item"
+              >
+                {/* <Image
+                  src={featuretwo}
+                  alt="Features split 02"
+                  width={528}
+                  height={396}
+                /> */}
+              </div>
+            </div>
+            <div
+              className="split-item"
+              data-aos="fade-right"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
+              <div
+                className="split-item-content center-content-mobile reveal-from-left"
+                data-reveal-container=".split-item"
+              >
+                <h3 className="mt-0 mb-12">Let The Quest Begins</h3>
+                <p className="m-0">
+                  More than just a beautiful piece of Art, the race to dip the
+                  rarest treasure begins in a space of 2 weeks after the minting
+                  exercise. This is exclusive to holders as the first map is
+                  released.
+                </p>
+              </div>
+              <div
+                className={classNames(
+                  "split-item-image center-content-mobile reveal-from-bottom",
+                  imageFill && "split-item-image-fill"
+                )}
+                data-reveal-container=".split-item"
+              >
+                {/* <Image
+                  src={featureone}
+                  alt="Features split 01"
+                  width={528}
+                  height={396}
+                /> */}
+              </div>
+            </div>
+
+            <div
+              className="split-item"
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
+              <div
+                className="split-item-content center-content-mobile reveal-from-right"
+                data-reveal-container=".split-item"
+              >
+                <h3 className="mt-0 mb-12"> Non-Ending Fun</h3>
+                <p className="m-0">
+                  Every week a new map is released for its treasure to be dug up
+                  and unlocked. Lucky Nokians also gets the amazing cash prizes
+                  from weekly sweepstakes with entry fee .
+                </p>
+              </div>
+              <div
+                className={classNames(
+                  "split-item-image center-content-mobile reveal-from-bottom",
+                  imageFill && "split-item-image-fill"
+                )}
+                data-reveal-container=".split-item"
+              >
+                {/* <Image
+                  src={featuretwo}
+                  alt="Features split 02"
+                  width={528}
+                  height={396}
+                /> */}
               </div>
             </div>
           </div>

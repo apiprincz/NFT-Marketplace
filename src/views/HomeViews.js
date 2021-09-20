@@ -3,16 +3,15 @@ import React from "react";
 import Hero from "../components/sections/Hero";
 import FeaturesTiles from "../components/sections/FeaturesTiles";
 import FeaturesSplit from "../components/sections/FeaturesSplit";
-import Testimonial from "../components/sections/Testimonial";
+// import Testimonial from "../components/sections/Testimonial";
 import Cta from "../components/sections/Cta";
 import Sector from "../components/sections/Sector";
-
+// import Slider from "../components/sections/Slider";
 
 // import web3 from '@solana/web3.js';
 // import splToken from '@solana/spl-token';
 
-const Home = () => {
-
+const HomeViews = () => {
   // (async () => {
   //   // Connect to cluster
   //   var connection = new web3.Connection(
@@ -25,6 +24,7 @@ const Home = () => {
     <>
       <Hero className="illustration-section-01" />
       <FeaturesTiles />
+      {/* <Slider /> */}
       <FeaturesSplit
         invertMobile
         topDivider
@@ -32,10 +32,10 @@ const Home = () => {
         className="illustration-section-02"
       />
       <Sector className="illustration-section-01" />
-      <Testimonial topDivider />
+      {/* <Testimonial topDivider /> */}
       <Cta split />
     </>
   );
 };
 
-export default Home;
+export default HomeViews;

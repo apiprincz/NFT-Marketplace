@@ -6,7 +6,8 @@ import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
 import video from "./../../assets/images/video-placeholder.jpg";
-import { Demo } from "../../Demo";
+// import { Demo } from "../../Demo";
+import AppCandy from "../../AppCandy";
 
 const propTypes = {
   ...SectionProps.types,
@@ -58,25 +59,23 @@ const Hero = ({
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="hero-content">
-            <h1
+            <h3
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
+              data-aos="fade-down"
+              data-aos-duration="3000"
             >
-              KuNFT's For <span className="text-color-primary">EVERYONE</span>
-            </h1>
+              The Wakanda group brings to you the NOK NFT characters featuring
+              <span className="text-color-primary"> 10,000 </span>
+              pieces each with specialized unique traits and antiques that will
+              spur and enrich the souls of every collector.
+            </h3>
             <div className="container-xs">
               <p className="m-0  reveal-from-bottom" data-reveal-delay="400">
-                The perks of building a rich NFT marketplace is to create a
-                sense of belonging for all.
+                The beauty of Africa lies not only in her mountains and rivers
+                or her wildlife and landscapes but in her ART
               </p>
               <br></br>
-              <p
-                className="m-0 mb-16 reveal-from-bottom"
-                data-reveal-delay="400"
-              >
-                Tell your unique{" "}
-                <span style={{ color: "#23af91" }}>stories</span> with KuNFT's
-              </p>
 
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 {/* <ButtonGroup>
@@ -92,7 +91,8 @@ const Hero = ({
                     Learn More
                   </Button>
                 </ButtonGroup> */}
-                <Demo />
+                {/* <Demo /> */}
+                <AppCandy />
               </div>
             </div>
           </div>

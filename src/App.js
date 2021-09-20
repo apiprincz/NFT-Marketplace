@@ -1,14 +1,16 @@
-import React, { useRef, useEffect, FC } from "react";
+import React, { useRef, useEffect, FC, useMemo } from "react";
 import { useLocation, Switch } from "react-router-dom";
 import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
 import ReactGA from "react-ga";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 // Layouts
 import LayoutDefault from "./layouts/LayoutDefault";
 
 // Views
-import Home from "./views/Home";
+import HomeViews from "./views/HomeViews";
 
 // Creator
 import Creator from "./views/Creator";
@@ -32,6 +34,8 @@ import "./App.css";
 // };
 
 /* from sol-nft program */
+
+/**from candy */
 
 const theme = createTheme({
   palette: {
@@ -73,6 +77,11 @@ const App = () => {
   useEffect(() => {
     const page = location.pathname;
     document.body.classList.add("is-loaded");
+    Aos.init({
+      duration: 2000,
+      offset: 200,
+      // throttleDelay: 99
+    });
     // childRef.current.init();
     // trackPage(page);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -88,7 +97,7 @@ const App = () => {
               <AppRoute
                 exact
                 path="/"
-                component={Home}
+                component={HomeViews}
                 layout={LayoutDefault}
               />
               <AppRoute
